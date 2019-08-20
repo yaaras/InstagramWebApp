@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1c5e0aa51a.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Cats</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">
+            <!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap -->
+            <span class="fas fa-cat"></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Dropdown menu  -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <!-- Button trigger Upload modal -->
+                        <button type="button" class="dropdown-item btn" data-toggle="modal" data-target="#uploadModal">
+                            Upload
+                        </button>
+                    </div>
+                </li>
+
+                <!-- Button trigger Change Background modal -->
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#changeBgModal">
+                    Change Background
+                </button>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="searchForm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                </div>
+                <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search Username" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Image Cards go here -->
+    <div class="container cats"></div>
+
+    <!-- Templates -->
+    <div class="templates">
+        <!-- Card Template -->
+        <div class="row justify-content-center catImage">
+            <div class="col-6 align-self-center ">
+                <br>
+                <div class="card" style="width: 32rem;">
+                    <div class="card-header">
+                        <div class="d-flex flex-row">
+                            <div class="imgIndex"></div>
+                            <img class="avatar pr-1" src="">
+                            <b class="username pr-1"></b>
+                            <p class="pr-1"> in </p>
+                            <p class="location pr-1"></p>
+                        </div>
+                    </div>
+                    <img src="" class="card-img-top picture" alt="...">
+                    <div class="card-body">
+                        <div d-flex flex-row>
+                            <span class="p-1 far fa-heart clickable"></span>
+                            <span class="p-1 far fa-comment clickable"></span>
+                        </div>
+                        <div>
+                            <b class="likeCount"></b><b> likes</b>
+                        </div>
+                        <div class="commentSection"></div>
+                        <form class="commentForm">
+                            <div class="d-flex flex-row">
+                                <img class="avatar" src="">
+                                <div class="p-1"><b class="username"></b></div>
+                                <input type="text" class="p-1 commentMsg" placeholder="Add a comment...">
+                                <button type="" class="p-1 btn btn-link post">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment Template -->
+        <div class="d-flex flex-row comment">
+            <img class="avatar">
+            <div class="p-1"><b class="username"></b></div>
+            <div class="p-1 message"></div>
+        </div>
+    </div>
+
+    <!-- Change Background Modal -->
+    <div class="modal fade" id="changeBgModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Choose Background</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- <div class="modal-body d-flex flex-wrap align-content-center bg-light" style="height:100px; width:100px"> -->
+                <div class="modal-body">
+                    <div class="d-flex flex-wrap bg-choose">
+                        <img src="./images/img01.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img01">
+                        <img src="./images/img02.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img02">
+                        <img src="./images/img03.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img03">
+                        <img src="./images/img04.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img04">
+                        <img src="./images/img05.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img05">
+                        <img src="./images/img06.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img06">
+                        <img src="./images/img07.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img07">
+                        <img src="./images/img08.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img08">
+                        <img src="./images/img09.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img09">
+                        <img src="./images/img10.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img10">
+                        <img src="./images/img11.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img11">
+                        <img src="./images/img12.jpg" alt="" srcset="" class="rounded img-item img-tumbnail p-1" id="img12">
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Picture Modal -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Upload Picture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- <div class="modal-body d-flex flex-wrap align-content-center bg-light" style="height:100px; width:100px"> -->
+                <div class="modal-body">
+                    <!-- <div class="uploadForm"> -->
+                    <form class="uploadForm" id="uploadForm">
+                        <div class="form-group">
+                            <label for="usernameInput">Username</label>
+                            <input type="text" class="form-control" id="usernameInput" placeholder="Enter Username" required>
+
+                            <label for="descriptionInput">Location</label>
+                            <input type="text" class="form-control" id="locationInput" placeholder="Enter Location" required>
+
+                            <label for="locationInput">Description</label>
+                            <input type="text" class="form-control" id="descriptionInput" placeholder="Enter Description" required>
+
+                            <label for="locationInput">Image Link</label>
+                            <input type="text" class="form-control" id="imageInput" placeholder="Enter Image Link" required>
+
+                            <label class="p-1 radio-inline avatar"><input type="radio" name="avatarRadio" checked><img src="/avatars/icon1.jpg"></label>
+                            <label class="p-1 radio-inline avatar"><input type="radio" name="avatarRadio"><img src="/avatars/icon2.jpg"></label>
+                            <label class="p-1 radio-inline avatar"><input type="radio" name="avatarRadio"><img src="/avatars/icon3.jpg"></label>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="exampleFormControlFile1">Picture</label>
+                            <input type="file" class="form-control-file" id="selectPic">
+                        </div> -->
+                        <div class="modal-footer">
+                            <button type="" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- jQuery Script -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
