@@ -1,4 +1,6 @@
 # InstagramWebApp
+[![License Badge](https://img.shields.io/github/license/yaaras/InstagramWebApp)](LICENSE)
+
 Simple Instagram clone for web
 
 ![Screenshot](screenshot.png)
