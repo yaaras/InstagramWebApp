@@ -1,6 +1,8 @@
 # InstagramWebApp
 Simple Instagram clone for web
 
+![Screenshot](screenshot.png)
+
 ## Description
 This is a simple Instagram clone that runs on a python server with JSON as its database.
 The main features are:
