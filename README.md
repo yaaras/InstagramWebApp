@@ -16,5 +16,5 @@ The main features are:
 
 ## Getting Started
 To run the app, first run the server and then open the app on the browser:
-`python2 server.py`
+`python server.py`
 
